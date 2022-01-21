@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShinyDex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="startAll()">
+    <h1>ShinyDex</h1>
+    <button id="nat-btn" type="button" data-toggle="collapse" data-target="#nationalPokedex" class="btn btn-outline-light f-btn active"><h2>National Pokédex</h2></button>
+    <button id="kanto-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 1 - Kanto</h2></button> 
+    <button id="johto-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 2 - Johto</h2></button>
+    <button id="hoenn-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 3 - Hoenn</h2></button>  
+    <button id="sinnoh-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 4 - Sinnoh</h2></button> 
+    <button id="unova-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 5 - Unova</h2></button> 
+    <button id="kalos-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 6 - Kalos</h2></button>
+    <button id="alola-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 7 - Alola</h2></button>
+    <button id="galar-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 8 - Galar</h2></button>
+    <button id="hisui-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 9 - Hisui</h2></button>
+  
+    <div id="nationalPokedex" class="f-grid collapse show active"></div>
+    
+    <div id="f-johto" class="collapse"></div>
+    
+    <div id="f-hoenn" class="collapse"></div>
+    
+    <div id="f-sinnoh" class="collapse"></div>
+    
+    <div id="f-unova" class="collapse"></div>
+    
+    <div id="f-kalos" class="collapse"></div>
+    
+    <div id="f-alola" class="collapse"></div>
+    
+    <div id="f-galar" class="collapse"></div>
+    
+    <div id="f-hisui" class="collapse"></div> 
+    <script src="bootstrap.bundle.js"></script>
+    <script src="jquery.js"></script>
+    <script src="code.js"></script>
+</body>
+</html>

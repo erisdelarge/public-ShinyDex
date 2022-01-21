@@ -1,0 +1,67 @@
+
+.f-btn {
+    color: #ccc;
+    background-color: none;
+}
+.f-btn:focus {
+    color: black;
+    background-color: #f8f9fa;
+    box-shadow: none;
+}
+.f-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    display: grid;
+    grid-gap: 2rem 0.75rem;
+    margin-bottom: 1rem;
+}
+
+
+.f-card {
+    display: inline-block;
+    padding: 0 0.75rem 2rem;
+    line-height: 1.25;
+    text-align: center;
+
+}
+.f-cardform {
+    padding: 0 0.75rem 1rem;
+    line-height: 1.25;
+    text-align: center;
+
+}
+.f-sprite .f-normalimg {  
+    position: absolute; 
+    width: 128px; 
+}
+.f-sprite .f-shinyimg {   
+    position: relative;
+    width: 128px; 
+}
+.f-sprite:hover > .f-normalimg {
+    z-index: 999;
+}
+.f-name {
+    font-size: 1rem;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(0, 0, 218);
+    text-transform: capitalize;
+}
+.f-modal-tit {
+    text-transform: capitalize;
+}
+.f-name:hover {
+    text-decoration: underline;
+    color: rgb(167, 0, 64);
+}
+.f-grass:hover {
+    color: #78c850;
+}
+.f-orms {
+    text-decoration: none;
+    color: rgb(133, 131, 131);
+    font-size: 13px;
+    
+    
+}
