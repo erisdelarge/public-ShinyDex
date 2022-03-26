@@ -1,9 +1,13 @@
-
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
 function startAll(){
 // $('#nat-btn').on('click', function() {
 //     document.getElementById("nationalPokedex").classList.toggle('show');
 
 // }) ;
+// When the user clicks on the button, scroll to the top of the document
 
 /// e n d   b u t t o n s
 
@@ -2157,7 +2161,14 @@ $.getJSON(pokedex_url, function(jsonObj) {
          
         }
         
+
+
+
+
+
+
         $('#nationalPokedex').html(card);
+      
         // $('#kanto-btn').on('click', function() {
         
         //     $('.f-card').each(function(){
@@ -2174,6 +2185,70 @@ $.getJSON(pokedex_url, function(jsonObj) {
 
     // });
 });
+
+const GEN_URL= "https://pokeapi.co/api/v2/generation/";
+$.getJSON(GEN_URL, function(data){
+    var gen_results=data.results;
+    var buttonGenerator=``;
+    for (i=1; i<=gen_results.length; i++){
+      
+        // var buttonsArray=[];
+        // var gens_url=;
+        $.getJSON(GEN_URL+i, function(gens_data){
+            var gens_region=gens_data.main_region;
+            var gens_id=gens_data.id;
+            var species= gens_data.pokemon_species;
+            var firstSpecieUrl= species[0].url;
+            var linkToFirstSpecie=""; 
+            
+            // console.log("this is the first pokemon in this region: "+firstSpecieUrl+"; this is the id of the first specie of this region: "+firstSpecie);
+            buttonGenerator+=`<button style="position: relative;" id="btnGen`+gens_id+`" type="button" class="btn btn-outline-light f-btn"><h2>Gen `+gens_id+` - `+gens_region.name+`</h2><a style="position: absolute; width:250px; height: 60px; left:50%; top:50%; transform: translate(-50%, -50%);" id="regionFirstSpecie`+gens_id+`"></a></button> `;
+            // console.log(gens_id +" - " +gens_region.name);
+            console.log(buttonGenerator);
+            
+            $("#buttonsContainer").html(buttonGenerator);
+            $.getJSON(firstSpecieUrl, function(specieData){
+                var firstSpecie = specieData.id;
+                console.log("this is the id of this first regional pokemon: "+firstSpecie);
+                // linkToFirstSpecie = `<a href="#`+firstSpecie+`"></a>`;
+                // console.log(linkToFirstSpecie);
+                $("#regionFirstSpecie"+gens_id).attr("href", "#"+firstSpecie); 
+                // $("#regionFirstSpecie"+gens_id).html(linkToFirstSpecie); 
+
+            })
+            // buttonsArray.push(buttonGenerator);
+        });
+        // console.log(buttonsArray);
+       
+
+    };
+    
+    // $("#test").html(buttonGenerator);
+    // gen_results.forEach((gen_result)=>{
+        
+    //     $.getJSON(gen_result.url, function(jsonObject){
+    //         var region =jsonObject.main_region;
+    //         console.log(region);
+    //     })
+       
+    // })
+    
+})
+// $(document).on("click", "btnGen2", function(){
+//     // for (i=1; i<152; i++){
+//     $("#1").addClass("d-none")    
+//     // }
+// })
+// buttonsMaker = `<button id="kanto-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 1 - Kanto</h2></button> 
+// <button id="johto-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 2 - Johto</h2></button>
+// <button id="hoenn-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 3 - Hoenn</h2></button>  
+// <button id="sinnoh-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 4 - Sinnoh</h2></button> 
+// <button id="unova-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 5 - Unova</h2></button> 
+// <button id="kalos-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 6 - Kalos</h2></button>
+// <button id="alola-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 7 - Alola</h2></button>
+// <button id="galar-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 8 - Galar</h2></button>
+// <button id="hisui-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 9 - Hisui</h2></button>`;
+// $('#buttonsContainer').html(buttonsMaker);
 
 };
  //funzioni UTILI by Dave

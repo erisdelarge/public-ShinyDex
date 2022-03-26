@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="startAll()">
-    <h1>ShinyDex</h1>
+    <div id="myHeader" class=" header mt-3 d-flex justify-content-between"><h1>ShinyDex</h1></div>
     <!-- <button id="nat-btn" type="button" data-toggle="collapse" data-target="#nationalPokedex" class="btn btn-outline-light f-btn active"><h2>National Pokédex</h2></button> -->
-    <button id="kanto-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 1 - Kanto</h2></button> 
+    <!-- <button id="kanto-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 1 - Kanto</h2></button> 
     <button id="johto-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 2 - Johto</h2></button>
     <button id="hoenn-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 3 - Hoenn</h2></button>  
     <button id="sinnoh-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 4 - Sinnoh</h2></button> 
@@ -22,12 +22,20 @@
     <button id="kalos-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 6 - Kalos</h2></button>
     <button id="alola-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 7 - Alola</h2></button>
     <button id="galar-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 8 - Galar</h2></button>
-    <button id="hisui-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 9 - Hisui</h2></button>
+    <button id="hisui-btn" type="button" class="btn btn-outline-light f-btn"><h2>Gen 9 - Hisui</h2></button> -->
     <!-- <div class="tab-content">
         <div class="tab-pane fade" id="tabProva" role="tabpanel"></div>
     </div> -->
-    
+    <div id="test"></div>
+    <div id="buttonsContainer" class="my-5"></div>
     <div id="nationalPokedex" class="f-grid collapse show active"></div>
+    <div class="fixed">
+        <button onclick="topFunction()" id="scrollTop" href="#myHeader">
+            <img id="top-arrow" src="assets/img/top-icon.png" alt="scroll-to-top-arrow">
+            
+            <img id="ball-icon" src="assets/img/poke-top.png" alt="scroll-to-top-octopus-icon">
+        </button>
+    </div>
     <!-- <div id="loadMore">Load more</div> -->
         <!-- <p>Ciaooooooooooooo</p> -->
         <!-- <div id="f-prova">

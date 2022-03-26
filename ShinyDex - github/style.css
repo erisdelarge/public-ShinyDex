@@ -23,11 +23,35 @@
   }
    */
   /* end dropdown menu */
-
-
+/* style x lo scroll-to-top btn */
+.fixed  {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.5;
+}
+#scrollTop { /*eliminiamo tutto lo style di default del button elem*/
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer; /*add hand-pointer cursor when hover */
+}
+#ball-icon{
+    width: 30px;
+    margin: 0;
+    position:relative;
+}
+#top-arrow{
+    position:absolute;
+    bottom:25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* end scroll-to-top style  */
 .f-btn {
     color: #ccc;
     background-color: none;
+    width: 250px;
 }
 .f-btn:focus {
     color: black;
