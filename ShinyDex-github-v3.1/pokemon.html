@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="assets/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+<body style="margin: 0;">
+    
+    <div id="poke-content" class="container-md px-0 px-md-5">
+        <div class="card">
+           <div class="d-flex retry-section">
+                <a class="h1 d-flex f-retry f-retry-color" href="index.html">
+                    <!-- href="javascript:history.go(-1)" -->
+                    <i class="f-retry-icon fa-solid fa-chevron-left"></i>
+                    <h4>ShinyDex</h4>
+                        </a>
+                
+           </div>
+           <div class="container-md f-card-title">
+               <div class="f-pmn-name f-titles-color"><h1>Voltorb</h1><h1>#</h1></div>
+               <div class="f-pmn-name-span f-titles-color"><span>0100</span></div>
+           </div>
+           <!-- src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/100.png" -->
+           <!-- src="assets/img/arceus-hisui-100-s.png" -->
+           <!-- https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/100.png-->
+           <img class="pmn-artwork" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/100.png" alt="pokémon-artwork">
+            <!-- <h5 class="card-title pmn-title">Hello</h5>
+            <h5 id="pmName"></h5> -->
+            <img src="assets/img/bg/bg-red.png" class="card-img-top" alt="pokemon-background">
+        <div class="card-body f-card-body">
+            
+                <div class="row">
+                    <div class="f-type f-type0 col-12 text-center"><span>Electric</span></div>
+                    <div class="f-type f-type1 col-6 text-end"><span>Ghost</span></div>
+                    <div class="f-type f-type2 col-6 text-start"><span>Poison</span></div>
+                    <div class="row f-spcf-row">
+                        <div class="f-pmn-categ col-6 text-center"><p>Shadow</p><span class="text-muted">Pokémon </span></div>
+                        <div class="f-pmn-roomaji col-6 text-end"><p>ビリリダマ </p><span class="text-muted">'Biriridama'</span> </div>
+                    </div>
+                    <div class="f-row-wrapper m-0 p-0">
+                        <div class="row mx-auto mx-md-2 f-ablt-row text-center mt-4">
+                            
+                            <div class="col-6 f-ablt-col"><p>Cursed Body | Shadow Tag</p> <span class="text-muted">Abilities</span> </div>
+                            <div class="col-6  "><p>Levitate </p><span class="text-muted">Hidden abilities</span> </div>
+                        </div>
+                        <div class="row mx-auto mx-md-2 f-ablt-row text-center mt-4">
+                            <div class="col-auto f-padding px-lg-4 col-lg-auto f-ablt-col"> <canvas id="genre-canvas" width="50" height="50" aria-label="genre percentage"></canvas>
+                                <p class="genre-canvas-label">50 / 50</p><span class="text-muted genre-text-muted">(gender ratio)</span></div>
+                                <!-- 4'11" | 1.5 m -->
+                                <!-- 89.3 lbs. | 40.5 kg -->
+                            <div class="col-4 col-lg-auto pt-3 px-lg-4 f-ablt-col"><p>1.5 mt</p><span class="text-muted">(height)</span></div>
+                            <div class="col-4 col-lg-auto pt-3 px-lg-4"><p>40.5 kg</p><span class="text-muted">(weight)</span></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8 col-xl-6 f-stats"><p class="px-5 m-0">Stats:</p>
+                            <table class="table">
+                              
+                                <tbody>
+                                   <tr>
+                                    <th scope="row">HP</th>
+                                    <td>60</td>
+                                    <td class="f-td-bar"><div id="myProgress" >
+                                        <div id="myBar" ></div>
+                                      </div></td>
+                                    <td>230</td>
+                                    <td>324</td>
+                                   </tr> 
+                                   <tr>
+                                    <th scope="row">ATK</th>
+                                    <td>62</td>
+                                    <td class="f-td-bar"><div id="myProgress" >
+                                        <div id="myBar" ></div>
+                                      </div></td>
+                                    <td>116</td>
+                                    <td>245</td>
+                                   </tr> 
+                                   <tr>
+                                    <th scope="row">DEF</th>
+                                    <td>63</td>
+                                    <td class="f-td-bar"><div id="myProgress" >
+                                        <div id="myBar" ></div>
+                                      </div></td>
+                                    <td>117</td>
+                                    <td>247</td>
+                                   </tr> 
+                                   <tr>
+                                    <th scope="row">SP.ATK</th>
+                                    <td>80</td>
+                                    <td class="f-td-bar"><div id="myProgress" >
+                                        <div id="myBar" ></div>
+                                      </div></td>
+                                    <td>148</td>
+                                    <td>284</td>
+                                   </tr> 
+                                   <tr>
+                                    <th scope="row">SP.DEF</th>
+                                    <td>80</td>
+                                    <td class="f-td-bar"><div id="myProgress" >
+                                        <div id="myBar" ></div>
+                                      </div></td>
+                                    <td>148</td>
+                                    <td>284</td>
+                                   </tr> 
+                                   <tr>
+                                    <th scope="row">SPEED</th>
+                                    <td>60</td>
+                                    <td><div id="myProgress" >
+                                        <div id="myBar" ></div>
+                                      </div></td>
+                                    <td>112</td>
+                                    <td>240</td>
+                                   </tr> 
+                                   <tr>
+                                    <th class="f-last-td" scope="row">TOT</th>
+                                    <td class="f-last-td fw-bold text-danger">405</td>
+                                    <td class="f-last-td"></td>
+                                    <td class="f-last-td text-muted" text-muted>min</td>
+                                    <td class="f-last-td text-muted">max</td>
+                                   </tr> 
+                                </tbody>
+    
+                            </table>
+                            
+    
+                        </div>
+                    </div>
+                    <div class="f-evo-line mt-4 pt-2 text-center">
+                        <p>Evolution Line:</p>
+                        <div class="row justify-content-center my-0 py-0 mx-lg-5 px-lg-5">
+                            <div class="p-0 col-2"><span class=""><a href="/pokedex/bulbasaur"><img class="img-fixed f-pmn-evosprite" src="assets/img/92aw.png" alt="Gastly sprite"></a></span><span class="d-flex flex-column"><small class="text-muted f-evo-index-number">#092</small><span class="f-evo-sprite-name">Gastly</span></span></div>
+                            <span class="d-flex flex-column col-2 col-xl-1 p-0">
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg> -->
+                                <small>Lv 25</small><i class="fa-solid fa-share"></i></span>
+                            <div class="p-0 col-2"><span class=""><a href="/pokedex/ivysaur"><img class="img-fixed f-pmn-evosprite" src="assets/img/93aw.png" alt="Haunter sprite"></a></span><span class="d-flex flex-column"><small class="text-muted f-evo-index-number">#093</small><span class="f-evo-sprite-name">Haunter</span></span></div>
+                            <span class="d-flex flex-column col-2 col-xl-1 p-0"><small>Trade</small><i class="fa-solid fa-share"></i></span>
+                            <div class="p-0 col-2"><span class=""><a href="/pokedex/venusaur"><img class="img-fixed f-pmn-evosprite" src="assets/img/94aw.png" alt="Gengar sprite"></a></span><span class="d-flex flex-column"><small class="text-muted f-evo-index-number">#094</small><span class="f-evo-sprite-name">Gengar</span></span></div>
+                        </div>
+                    </div>
+                    <div class="f-poke-descr"><p class="px-5 m-0 f-poke-descr-p">Pokédex description:</p>
+                    <div class="f-poke-voice border-red"><p>Under a full moon, this POKéMON likes to mimicthe shadows of people and laugh at their fright.<span>Pokémon Red ~  </span></p></div></div>
+                </div>
+            
+        </div>
+        </div>
+        
+
+    </div>
+     <!-- link x il kit fontawesome -->
+     <script src="https://kit.fontawesome.com/d729148e89.js" crossorigin="anonymous"></script>
+     <!-- chart.js doughnutlabel plugin script: -->
+     <script src="chartjs-plugin-doughnutlabel.min.js"></script>
+    
+     <!-- chart.js script:  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        const labels = [
+        'Red',
+        'Blue'
+        ];
+      
+        const data = {
+         
+          datasets: [{
+            label: 'My First dataset',
+            data: [50, 50],
+            backgroundColor:  [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)'
+            ],
+            
+            hoverOffset: 4
+          }]
+        };
+      
+        const config = {
+            type: 'doughnut',
+            data: data,
+            options: {
+                cutout: 25,
+                plugins: {
+        
+                    
+                }
+            }
+        };
+        const myChart = new Chart(
+    document.getElementById('genre-canvas'),
+    config
+  );
+//   labels: labels,
+//   borderColor: 'rgb(255, 99, 132)',
+// cutout: 20,
+// doughnutlabel: {
+//                         labels: [{
+//                         text: '50/50',
+//                         font: {
+//                             size: 13,
+//                             weight: 'bold'
+//                         }
+//                         }]
+//                     }
+
+      </script>
+</body>
+</html>
